@@ -3,7 +3,7 @@ layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-FIXME: home page introduction
+This website is a supplement to a quick crash course for NGS data processing, with a focus on Oxford Nanopore Technologies, designed for POH Lab.
 
 <!-- this is an html comment -->
 
@@ -11,7 +11,8 @@ FIXME: home page introduction
 
 > ## Prerequisites
 >
-> FIXME
+> This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations.
+> While no experience with the bash shell is required, a little prior coding experience is recommended -- for ease of understanding.
 {: .prereq}
 
 {% include links.md %}
