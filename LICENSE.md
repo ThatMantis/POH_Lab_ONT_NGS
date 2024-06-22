@@ -4,9 +4,9 @@ title: "Licenses"
 root: .
 ---
 
-This work is copyright © Greg Tucker-Kellogg
+This work is copyright © Lin Zhangyuan
 
-This work is derived from [carpentries/styles][styles] , which is copyright © Software  Carpentry and is licenced from [The Carpentries][the-carpentries] under [CC-BY-4.0][cc-by-human]
+This work is derived from [GTK-teaching/lesson-template], which is derived from [carpentries/styles][styles] , which is copyright © Software  Carpentry and is licenced from [The Carpentries][the-carpentries] under [CC-BY-4.0][cc-by-human]
 
 This work is made available under the [Creative Commons Attribution
 license][cc-by-human]. 
@@ -52,3 +52,4 @@ Notices:
 [osi]: https://opensource.org
 [the-carpentries]: https://carpentries.org
 [styles]: https://github.com/carpentries/s<tyles/
+[GTK-teaching/lesson-template]: https://github.com/GTK-teaching/lesson-template
