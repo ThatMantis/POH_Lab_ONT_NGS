@@ -3,7 +3,7 @@ title: "Lunch Break"
 teaching: 60
 source: md
 questions:
--
+- "Take a break..."
 objectives:
 - "Have a break and refresh up for the more complicated upcoming part!"
 ---
