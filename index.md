@@ -3,7 +3,7 @@ layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-This website is a supplement to a quick crash course for NGS data processing, with a focus on Oxford Nanopore Technologies, designed for POH Lab.
+This website is a supplement to a quick crash course for NGS data processing, with a focus on Oxford Nanopore Technologies. This workshop is designed for POH Lab, and primarily targeted at users with minimal to no experience and background in bioinformatics and NGS data processing.
 
 <!-- this is an html comment -->
 
