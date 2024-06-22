@@ -3,7 +3,7 @@
 #------------------------------------------------------------
 
 # Overall title for pages.
-title: "Lesson Title (using remote theme)"
+title: "NGS Data Processing for POH Lab"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
@@ -23,7 +23,7 @@ repository: <USERNAME>/<PROJECT>
 workshop_repo: site.repository
 
 # Email address, no mailto:
-email: "dbsgtk@nus.edu.sg"
+email: "linzy@nus.edu.sg"
 
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
