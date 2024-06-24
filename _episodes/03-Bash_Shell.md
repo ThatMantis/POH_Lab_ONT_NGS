@@ -194,4 +194,4 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 > {: .solution}
 {: .challenge}
 
-[setup] : https://thatmantis.github.io/POH_Lab_ONT_NGS/setup.html
+[setup]: https://thatmantis.github.io/POH_Lab_ONT_NGS/setup.html
