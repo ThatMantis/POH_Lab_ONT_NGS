@@ -110,6 +110,10 @@ Going into `/home` and inside the **user directory** (`linzy` in the example abo
 
 Now that we have a basic understanding of what the Bash Shell is, and how it relates to the file system and what we see on GUIs such as the Windows File Explorer, we can move on to some basic commands and shortcuts that you might commonly need to encounter in your line of work. 
 
+#### Useful Flags to Take Note
+
+`-h` or `-H` or `--help`: Used to show a list of possible parameters for a command.
+
 #### File System Related Commands
 
 `pwd`: "Print Working Directory", shows us where we currently are within the file system.
@@ -129,11 +133,13 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 `*`: Two functions. 
 1. `*` alone indicates all files/folders in the current working directory
 2. Having a letter upstream/downstream indicates all files/folders that have the same name as what has been typed
-  2.1. `*abc`: refers to all files/folders with a name that ends with "abc", regardless of whatever is before it. e.g. "1_abc", "2_abc", "1234567890_abc" etc will all be highlighted
-  2.2. `abc*`: refers to all files/folders with a name that starts with "abc", e.g. "abc_1", "abc_2", "abc_12345abc" etc
-  2.3. `*abc*`: a hybrid of the two, e.g. "12345_abc_asdtf", "asd_abc_123sada", "abc" etc.   
+2.1. `*abc`: refers to all files/folders with a name that ends with "abc", regardless of whatever is before it. e.g. "1_abc", "2_abc", "1234567890_abc" etc will all be highlighted
+2.2. `abc*`: refers to all files/folders with a name that starts with "abc", e.g. "abc_1", "abc_2", "abc_12345abc" etc
+2.3. `*abc*`: a hybrid of the two, e.g. "12345_abc_asdtf", "asd_abc_123sada", "abc" etc.   
 
 #### Loops
+
+
 
 
 
