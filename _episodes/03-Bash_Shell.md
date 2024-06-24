@@ -233,26 +233,26 @@ done
 
 > ## Absolute vs Relative Paths
 >
-> Starting from `/Users/amanda/data/`,
-> which of the following commands could Amanda use to navigate to her home directory,
-> which is `/Users/amanda`?
+> Starting from `/home/user/120724_NGS_Workshop/`,
+> which of the following commands could one use to navigate to the home directory,
+> which is `/home/user`?
 >
 > 1. `cd .`
 > 2. `cd /`
-> 3. `cd /home/amanda`
+> 3. `cd /home/user`
 > 4. `cd ../..`
 > 5. `cd ~`
 > 6. `cd home`
-> 7. `cd ~/data/..`
+> 7. `cd ~/120724_NGS_Workshop/..`
 > 8. `cd`
 > 9. `cd ..`
 >
 > > ## Solution
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
-> > 3. No: Amanda's home directory is `/Users/amanda`.
-> > 4. No: this goes up two levels, i.e. ends in `/Users`.
-> > 5. Yes: `~` stands for the user's home directory, in this case `/Users/amanda`.
+> > 3. Yes: Obviously...
+> > 4. No: this goes up two levels, i.e. ends in `/home`.
+> > 5. Yes: `~` stands for the user's home directory, in this case `/home/user`.
 > > 6. No: this would navigate into a directory `home` in the current directory if it exists.
 > > 7. Yes: unnecessarily complicated, but correct.
 > > 8. Yes: shortcut to go back to the user's home directory.
