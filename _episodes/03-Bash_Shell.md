@@ -133,9 +133,9 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 `*`: Two functions. 
 1. `*` alone indicates all files/folders in the current working directory
 2. Having a letter upstream/downstream indicates all files/folders that have the same name as what has been typed
-2.1. `*abc`: refers to all files/folders with a name that ends with "abc", regardless of whatever is before it. e.g. "1_abc", "2_abc", "1234567890_abc" etc will all be highlighted
-2.2. `abc*`: refers to all files/folders with a name that starts with "abc", e.g. "abc_1", "abc_2", "abc_12345abc" etc
-2.3. `*abc*`: a hybrid of the two, e.g. "12345_abc_asdtf", "asd_abc_123sada", "abc" etc.   
+- `*abc`: refers to all files/folders with a name that ends with "abc", regardless of whatever is before it. e.g. "1_abc", "2_abc", "1234567890_abc" etc will all be highlighted
+- `abc*`: refers to all files/folders with a name that starts with "abc", e.g. "abc_1", "abc_2", "abc_12345abc" etc
+- `*abc*`: a hybrid of the two, e.g. "12345_abc_asdtf", "asd_abc_123sada", "abc" etc.   
 
 #### Loops
 
