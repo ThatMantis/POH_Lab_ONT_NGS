@@ -118,21 +118,23 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `pwd`: "Print Working Directory", shows us where we currently are within the file system.
 
-- `ls`: Show the files and folders in the current working directory
+- `ls`: "List Files", Show the files and folders in the current working directory
 
-- `cd`: Change to a **downstream folder** from the current working directory
+- `cd`: "Change Directory", change to a **downstream folder** from the current working directory
 
 - `cd ~`: Change to **User's Home Directory**
 - `cd ..`: Change to the upstream directory
 - `cd -`: Change to the previous directory I was in
 
-- `mkdir`: Create a new folder within the current working directory
+- `mkdir`: "Make Directory", Create a new folder within the current working directory
 
-- `rm`: Remove a file/folder
+- `rm`: "Remove", Remove a file/folder
 
 ### Other Commands
 
+- `#`: Comment, not read by the command line.
 - `echo`: Similar to a "Print" command on Python etc.
+- `|`: used to pipe and connect commands entered on the same command line together -- by piping the output from the first command to the next command that is seperated by the "|".
 
 ### Shortcuts
 
@@ -140,7 +142,8 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `Ctrl-C` or `Cmd-C`: **Keyboard Interupt**, used to terminate a running program/script and return the control to the user. Usually used when a program/script/code is hanging the system, such as during an infinite-loop
 
-- `"right-click"`: **pasting**, equivalent to "Ctrl-V" or "Cmd-V" on the terminal, as physically pressing "Ctrl-V" or "Cmd-V" while in the terminal means something else!
+- `"right-click"`: **Pasting**, equivalent to "Ctrl-V" or "Cmd-V" on the terminal, as physically pressing "Ctrl-V" or "Cmd-V" while in the terminal means something else!
+- `Ctrl-C` or `Cmd-C`: While not running a script, it still serves as the **Copy** function!
 
 - `*`: Two functions. 
 - 1. `*` alone indicates all files/folders in the current working directory
@@ -151,7 +154,38 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 ### Loops
 
+- Looping through numbers numerically.
+~~~
+for VARIABLE in 1 2 3 4 5 .. N
+do
+    command1
+    command2
+    commandN
+done
+~~~
+{: .bash}
 
+- Looping through files, note the "$" before the "VARIABLE" within the loop.
+~~~
+for VARIABLE in file1 file2 file3
+do
+    command1 on $VARIABLE
+    command2
+    commandN
+done
+~~~
+{: .bash}
+
+- Looping through the output of a command.
+~~~
+for OUTPUT in $(Linux-Or-Unix-Command-Here)
+do
+    command1 on $OUTPUT
+    command2 on $OUTPUT
+    commandN
+done
+~~~
+{: .bash}
 
 
 
@@ -163,6 +197,38 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 > Notice how they might look similar, depending on the font and how the page is rendered, sometimes it can be very difficult to tell them apart.
 >
 {: .warning}
+
+
+> ## Create a Directory in User's Home for this Workshop
+> 
+> Create a directory named "120724_NGS_Workshop" within the User's home directory.
+> > ## Solution
+> >
+> > ~~~
+> > cd ~ #to direct us to the User Home directory
+> > mkdir 120724_NGS_Workshop
+> > ~~~
+> >{: .bash}
+> >
+> {: .solution}
+{: .challenge}
+
+> ## Using a For Loop, list the name of each file within the User's Home directory
+> 
+> Instead of using `ls`, use a **for loop** along with what we have learnt so far, as well as the help of google (or ChatGPT, as long as you understand what you're typing lol); to iterate the name of each folder in the User's Home Directory.
+> > ## Solution
+> > 
+> > ~~~
+> > cd ~ #to direct us to the User Home directory
+> > for file in ./*
+> > do
+> >   echo $file
+> > done
+> > ~~~
+> >{: .bash}
+> >
+> {: .solution}
+{: .challenge}
 
 
 > ## Absolute vs Relative Paths
