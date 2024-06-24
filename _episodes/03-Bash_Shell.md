@@ -130,6 +130,28 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `rm`: "Remove", Remove a file/folder
 
+> ## Deleting Is Forever
+>
+> The Shell does not have a trash bin for us to recover data that we have deleted, accidentally or not! When we delete files, they are gone for good (almost)!
+> If not confident with the shell when deleting stuff, just delete from the windows explorer!
+> Else we can add the "interactive" flag `-i` to `rm`, e.g. `rm "filename" -i`, which will ask us for confirmation before we delete each file!
+> 
+{: .warning}
+
+> ## Copy and Moving Files and Folders
+>
+> Rather than using Ctrl-C and Ctrl-V to move files/folders within the Ubuntu Virtual Environment, we can use the commands `cp` and `mv`(and the Windows Explorer obviously lol).
+> ~~~
+> cp abc.txt folder/abc.txt #copies the file "abc.txt" from the current directory to a folder called "folder"
+> cp abc.txt folder/def.txt #copies the file "abc.txt" from the current directory to a folder called "folder", while also renaming it to "def.txt"
+> mv abc.txt folder/def.txt #MOVES the file "abc.txt" from the current directory to a folder called "folder", while also renaming it to "def.txt"
+> ~~~
+> {: .bash}
+>
+> Do be careful when specifying the target file name, since `mv` will silently overwrite any existing file with the same name!. An additional flag, `mv -i` (or `mv --interactive`), can be used to make `mv` ask you for confirmation before overwriting.
+> 
+{: .callout}
+
 ### Other Commands
 
 - `#`: Comment, not read by the command line.
@@ -142,8 +164,8 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `Ctrl-C` or `Cmd-C`: **Keyboard Interupt**, used to terminate a running program/script and return the control to the user. Usually used when a program/script/code is hanging the system, such as during an infinite-loop
 
-- `"right-click"`: **Pasting**, equivalent to "Ctrl-V" or "Cmd-V" on the terminal, as physically pressing "Ctrl-V" or "Cmd-V" while in the terminal means something else!
-- `Ctrl-C` or `Cmd-C`: While not running a script, it still serves as the **Copy** function!
+- `"right-click"`: **Pasting**, equivalent to "Ctrl-V" or "Cmd-V" on the terminal, as physically pressing "Ctrl-V" or "Cmd-V" while in the terminal means something else! Useful for pasting a command from somewhere else into the terminal!
+- `Ctrl-C` or `Cmd-C`: While not running a script, it still serves as the **Copy** function! Useful for copying a command from the terminal!
 
 - `*`: Two functions. 
 - 1. `*` alone indicates all files/folders in the current working directory
