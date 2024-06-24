@@ -1,4 +1,4 @@
-![image](https://github.com/ThatMantis/POH_Lab_ONT_NGS/assets/75479328/41f60636-8c95-4667-8c36-d178096c21e3)---
+---
 title: "Introduction to the Bash Shell"
 teaching: 60
 source: md
