@@ -216,6 +216,7 @@ done
 > Be careful when directly copying and pasting commands directly from the internet .e.g from forums! This is because depending on the font/languages etc and how the webpage is rendered, certain characters can look very much alike like another character, yet mean something completely different, and someone might type the wrong character accidentally! And if we directly copy and paste, we might not be able to see it! One example might be "-" vs "--"
 > - `-`: "-", one dash.
 > - `–`: "--", two dashes!
+> 
 > Notice how they might look similar, depending on the font and how the page is rendered, sometimes it can be very difficult to tell them apart.
 >
 {: .warning}
