@@ -117,9 +117,13 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 #### File System Related Commands
 
 `pwd`: "Print Working Directory", shows us where we currently are within the file system.
+
 `ls`: Show the files and folders in the current working directory
+
 `cd`: Change to a **downstream folder** from the current working directory
+
 `mkdir`: Create a new folder within the current working directory
+
 `rm`: Remove a file/folder
 
 #### Other Commands
@@ -128,8 +132,11 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 #### Shortcuts
 `"tab"`: A shortcut to help fill in the full name of a file/folder, used by first typing parts of the name of a file/folder until the system can recognise one file/folder from the next, such as if two file/folders have a common portion in their name. E.g. `file_1_abcdefg` and `file_2_abcdefg`. By typing `file_1` and pressing `"tab"`, the system will automatically fill in `_abcdefg` for us
+
 `Ctrl-C` or `Cmd-C`: **Keyboard Interupt**, used to terminate a running program/script and return the control to the user. Usually used when a program/script/code is hanging the system, such as during an infinite-loop
+
 `"right-click": **pasting**, equivalent to "Ctrl-V" or "Cmd-V" on the terminal, as physically pressing "Ctrl-V" or "Cmd-V" while in the terminal means something else!
+
 `*`: Two functions. 
 1. `*` alone indicates all files/folders in the current working directory
 2. Having a letter upstream/downstream indicates all files/folders that have the same name as what has been typed
