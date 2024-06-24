@@ -156,7 +156,7 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `#`: Comment, not read by the command line.
 - `echo`: Similar to a "Print" command on Python etc.
-- `|`: used to pipe and connect commands entered on the same command line together -- by piping the output from the first command to the next command that is seperated by the "|".
+- `|`: used to pipe and connect commands entered on the same command line together, by piping the output from the first command to the next command that is seperated by the "|".
 
 ### Shortcuts
 
@@ -215,7 +215,7 @@ done
 >
 > Be careful when directly copying and pasting commands directly from the internet .e.g from forums! This is because depending on the font/languages etc and how the webpage is rendered, certain characters can look very much alike like another character, yet mean something completely different, and someone might type the wrong character accidentally! And if we directly copy and paste, we might not be able to see it! One example might be "-" vs "--"
 > `-`: "-"
-> `--`: "--"
+> `–`: "--"
 > Notice how they might look similar, depending on the font and how the page is rendered, sometimes it can be very difficult to tell them apart.
 >
 {: .warning}
