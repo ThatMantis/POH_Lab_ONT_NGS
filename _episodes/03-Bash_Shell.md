@@ -213,7 +213,7 @@ done
 
 > ## Pitfalls to Avoid
 >
-> Be careful when directly copying and pasting commands directly from the internet .e.g from forums! This is because depending on the font/languages etc and how the webpage is rendered, certain characters can look very much alike like another character, yet mean something completely different, and someone might type the wrong character accidentally! And if we directly copy and paste, we might not be able to see it! One example might be "-" vs "--"
+> Be careful when directly copying and pasting commands directly from the internet .e.g from forums! This is because depending on the font/languages etc and how the webpage is rendered, certain characters can look very much alike like another character, yet mean something completely different, and someone might type the wrong character accidentally! And if we directly copy and paste, we might not be able to see it! One example might be "-" vs "--".
 > - `-`: "-", one dash.
 > - `–`: "--", two dashes!
 > 
@@ -225,6 +225,7 @@ done
 > ## Create a Directory in User's Home for this Workshop
 > 
 > Create a directory named "120724_NGS_Workshop" within the User's home directory.
+> 
 > > ## Solution
 > >
 > > ~~~
@@ -234,11 +235,13 @@ done
 > >{: .bash}
 > >
 > {: .solution}
+> 
 {: .challenge}
 
 > ## Using a For Loop, list the name of each file within the User's Home directory
 > 
 > Instead of using `ls`, use a **for loop** along with what we have learnt so far, as well as the help of google (or ChatGPT, as long as you understand what you're typing lol); to iterate the name of each folder in the User's Home Directory.
+> 
 > > ## Solution
 > > 
 > > ~~~
@@ -251,6 +254,7 @@ done
 > >{: .bash}
 > >
 > {: .solution}
+> 
 {: .challenge}
 
 
@@ -271,6 +275,7 @@ done
 > 9. `cd ..`
 >
 > > ## Solution
+> > 
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
 > > 3. Yes: Obviously...
@@ -280,6 +285,7 @@ done
 > > 7. Yes: unnecessarily complicated, but correct.
 > > 8. Yes: shortcut to go back to the user's home directory.
 > > 9. Yes: goes up one level.
+> >
 > {: .solution}
 {: .challenge}
 
