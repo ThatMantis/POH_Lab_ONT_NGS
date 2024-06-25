@@ -127,5 +127,19 @@ In the folder with the corresponding `Analysis ID`, we should find a collection 
 ### EPI2ME Desktop
 
 
+> ## Using EPI2ME Agent, upload and align XXX.
+> 
+> FIXME
+> 
+> > ## Solution
+> >
+> > ~~~
+> > FIXME
+> > ~~~
+> >{: .bash}
+> >
+> {: .solution}
+> 
+{: .challenge}
 
 [Nextflow]: https://www.nextflow.io/
