@@ -38,7 +38,7 @@ In this segment, we will look at the use of the *EPI2ME Agent* for the two use c
 
 #### De novo Plasmid Assembly
 
-Starting from the *EPI2ME Agent's*"homepage", first press `New Analysis`, followed by `Select Folder(s)` to select the folder(s) containing the **BASECALLED** sequencing data -- This should be taken from the `"/fastq_pass"` folder! Select those folders and press on `Next` to select the workflow we will be running.
+Starting from the *EPI2ME Agent's*"homepage", first press `New Analysis`, followed by `Select Folder(s)` to select the folder(s) containing the **BASECALLED** sequencing data -- This should be taken from the `"/fastq_pass"` folder, and should contain data in the **.fastq** format! Select those folders and press on `Next` to select the workflow we will be running.
 
 ![Denovo01](../fig/EPI2ME/denovo01.png)
 
@@ -71,5 +71,61 @@ In the folder with the corresponding `Analysis ID`, we should find the *.fasta* 
 ![Denovo08](../fig/EPI2ME/denovo08.png)
 
 #### Custom Alignment
+
+For custom alignment of our sequencing data (*.fastq*) to a reference sequence, there are two steps required. 
+- First will be to upload the reference sequence, which should be in a *.fasta* format. This can be easily downloaded from benchling etc! This step will generate a `.FAI` file, which is a FASTA Index file on the EPI2ME cloud, which will be needed for the actual alignment. This only needs to be done once per reference sequence, and can be reused for multiple subsequent analysis and alignments! 
+- Second will be the actual "custom alignment" to this reference sequence which we just uploaded.
+
+#### Reference Upload
+
+Starting from the *EPI2ME Agent's*"homepage", first press `New Analysis`, followed by `Select File(s)` to select the file containing the reference sequence -- This should be in **.fasta** format! Select the file and press on `Next` to select the workflow we will be running.
+
+![refupload01](../fig/EPI2ME/refupload01.png)
+
+Here we will select `Fasta Reference Upload`, and press `Next`.
+
+![refupload02](../fig/EPI2ME/refupload02.png)
+
+Select `No` to the option "Are you uploading human DNA/RNA?". We should then see this screen. Enter a name that will allow us to identify this reference sequence later, under the `Reference Name` option. Press `Accept & Start`, and leave the computer on. This portion may take as much as 30 minutes to complete.
+
+![refupload03](../fig/EPI2ME/refupload03.png)
+
+Once this step is completed succesfully, we should see this screen saying `"WORKFLOW SUCCESSFUL"`.
+
+![refupload04](../fig/EPI2ME/refupload04.png)
+
+#### Custom Alignment
+
+Now we can proceed to the actual alignment. Again, Starting from the *EPI2ME Agent's*"homepage", first press `New Analysis`, followed by `Select Folder(s)` to select the folder(s) containing the **BASECALLED** sequencing data -- This should be taken from the `"/fastq_pass"` folder, and should contain data in the **.fastq** format! Select those folders and press on `Next` to select the workflow we will be running.
+
+![customalign01](../fig/EPI2ME/customalign01.png)
+
+Here we will select `Fastq Custom Alignment`, and press `Next`.
+
+![customalign02](../fig/EPI2ME/customalign02.png)
+
+Select `No` to the option "Are you uploading human DNA/RNA?". We should then see this screen. Under the `Reference` tab, find and select the name of the reference file we just uploaded and analyzed earlier. Do note that it could take a while before we see the reference file, depending on the server's speed!  Press `Accept & Start`.
+
+![customalign03](../fig/EPI2ME/customalign03.png)
+
+When the workflow has completed, we should see a screen like this, showing the status of each sample we uploaded for custom alignment. 
+
+![customalign05](../fig/EPI2ME/customalign05.png)
+
+Likewise with De novo assembly, to access the output, scroll down from the screen above and click on `output`.
+
+![customalign06](../fig/EPI2ME/customalign06.png)
+
+This should open up a File Explorer tab where all the EPI2ME analysis are stored by default. Find the folder with the corresponding `Analysis ID`.
+
+![customalign07](../fig/EPI2ME/customalign07.png)
+
+In the folder with the corresponding `Analysis ID`, we should find a collection of *.bam* and *.bai* files for the samples. These files contain the alignment information, and cannot be read manually by us, as they are in a binary format meant for the computer. To read them manually on Notepad and the like, they need to be in *.sam* format. However, we will leave that for later, after lunch!!!
+
+![customalign08](../fig/EPI2ME/customalign08.png)
+
+### EPI2ME Desktop
+
+
 
 [Nextflow]: https://www.nextflow.io/
