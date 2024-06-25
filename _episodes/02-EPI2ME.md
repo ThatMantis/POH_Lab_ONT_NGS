@@ -8,3 +8,38 @@ objectives:
 - "Learn the methods available to process ONT data."
 - "Processing ONT data in the simplest manner with GUI programs from ONT."
 ---
+
+### Data Processing With GUI Programs
+
+Now that (assuming) we have sequenced our DNA samples on the Nanopore Sequencer, we will probably need a method to analyse the data output (unless looking at thousands of lines of FASTQ output manually is your thing!). Typically to get useful information out of our sequencing data, the raw reads will need to pass through a variety of tools to give us our desired output -- aka a *workflow* or *pipeline*. Most of these *workflow* or *pipeline* will require some coding and work on the command line. However, there are also programs out there which require minimal coding and work on the command line by allowing the user to interact with Graphical User Interfaces (GUIs) -- these programs typically have the *workflow/piplines* hidden in the background behind the fancy looking GUIs, so that it looks less daunting to users with minimal coding experiences and are uncomfortable with using command line approaches, and who just want to get the work done.
+
+One such GUI program is the EPI2ME suite of applications, maintained by EPI2ME labs that offers a collection of [Nextflow] based bioinformatics workflows tailored to Oxford Nanopore Technologies (ONT) long-read sequencing data. In this chapter, we will take a look at EPI2ME, and how we might use them in our lab.
+
+![EPI2ME](../fig/EPI2ME/2.png)
+
+ONT currently offers two versions of EPI2ME. Shown on the left is the *EPI2ME Agent*, an older client which is meant to be retired end May 2024 (but somehow still works at the time of writing, June 2024). Whereas shown on the right is the *EPI2ME Desktop* program, which is meant to replace *EPI2ME Agent*. *EPI2ME Agent* makes use of cloud based computing for processing the workflows (AWS), which means anyone can use it regardless of their computer's capabilities. Whereas *EPI2ME Desktop* offers both cloud and local compute, although at the time of writing in June 2024, for most users it is currently limited to local compute, with cloud access limited to certain users only in closed beta.
+
+For the remaining portions of this chapter, we will look at how we can use the EPI2ME programs for some of the most common use cases in our lab:
+- De novo sequence assembly: Can be used to de novo assemble plasmid sequences etc. from the FASTQ sequencing data.
+- Custom Alignment: Can be used to align our sequencing data to a reference sequence. This step is useful for much of other workflows too!
+
+### EPI2ME Agent
+
+> ## Scheduled to be discontinued
+>
+>  Note that this segment of the website will be removed once service on the *EPI2ME Agent* is confirmed to be officially discontinued!
+> 
+{: .warning}
+
+In this segment, we will look at the use of the *EPI2ME Agent* for the two use cases mentioned above; which relies only on cloud based computing, making it possible for anyone to "run" their analysis on any computer.
+
+![EPI2ME Workflows](../fig/EPI2ME/3.png)
+
+#### De novo Plasmid Assembly
+
+
+
+
+
+
+[Nextflow]: https://www.nextflow.io/
