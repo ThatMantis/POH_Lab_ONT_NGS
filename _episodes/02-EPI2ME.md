@@ -21,13 +21,14 @@ ONT currently offers two versions of EPI2ME. Shown on the left is the *EPI2ME Ag
 
 For the remaining portions of this chapter, we will look at how we can use the EPI2ME programs for some of the most common use cases in our lab:
 - De novo sequence assembly: Can be used to de novo assemble plasmid sequences etc. from the FASTQ sequencing data.
+- - Note: Only samples containing a singular plasmid should use this analysis on EPI2ME! If your sample contains more than one plasmid, it is best to do a custom alignment specific to the plasmid we are interested at looking.
 - Custom Alignment: Can be used to align our sequencing data to a reference sequence. This step is useful for much of other workflows too!
 
 ### EPI2ME Agent
 
 > ## Scheduled to be discontinued
 >
->  Note that this segment of the website will be removed once service on the *EPI2ME Agent* is confirmed to be officially discontinued!
+>  Note that this segment of the website will be removed once service on the *EPI2ME Agent* is confirmed to be officially discontinued, and thus not relevant!
 > 
 {: .warning}
 
@@ -37,9 +38,24 @@ In this segment, we will look at the use of the *EPI2ME Agent* for the two use c
 
 #### De novo Plasmid Assembly
 
+Starting from the *EPI2ME Agent's*"homepage", first press `New Analysis`, followed by `Select Folder(s)` to select the folder(s) containing the **BASECALLED** sequencing data -- This should be taken from the `"/fastq_pass"` folder! Select those folders and press on `Next` to select the workflow we will be running.
 
+![Denovo01](../fig/EPI2ME/denovo01.png)
 
+Here we will select `Fastq Clone Validation`, and press `Next`.
 
+![Denovo02](../fig/EPI2ME/denovo02.png)
 
+Select `No` to the option "Are you uploading human DNA/RNA?". We should then see this screen. Thereafter, we will enter the estimated size of the plasmids we are expecting. This should be a value not more or less than 50% of the value indicated here. If you have samples with sizes much smaller than 50% of the value or 150% of the value indicated here, it will be best to rerun the analysis for those samples seperately in a seperate analysis!
+
+![Denovo03](../fig/EPI2ME/denovo03.png)
+
+Once the workflow starts, we should see a screen like this. Just leave the computer ON and let the program do its thing! This stage can take quite a while, depending on network and how long it takes to upload the files onto the cloud.
+
+![Denovo04](../fig/EPI2ME/denovo04.png)
+
+Once the analysis is completed, we can `Stop` the `Upload` and `Anlysis` buttons on the top of the screen. We should see something like this. The results of succesful De novo assemblies are indicated as `Completed succesfully` under `Status`, whereas those which failed will be indicated as `Failed to ...`. 
+
+![Denovo05](../fig/EPI2ME/denovo05.png)
 
 [Nextflow]: https://www.nextflow.io/
