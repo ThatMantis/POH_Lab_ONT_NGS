@@ -54,8 +54,22 @@ Once the workflow starts, we should see a screen like this. Just leave the compu
 
 ![Denovo04](../fig/EPI2ME/denovo04.png)
 
-Once the analysis is completed, we can `Stop` the `Upload` and `Anlysis` buttons on the top of the screen. We should see something like this. The results of succesful De novo assemblies are indicated as `Completed succesfully` under `Status`, whereas those which failed will be indicated as `Failed to ...`. 
+Once the analysis is completed, we can `Stop` the `Upload` and `Anlysis` buttons on the top of the screen. We should see something like this. The results of succesful De novo assemblies are indicated as `Completed succesfully` under `Status`, whereas those which failed will be indicated as `Failed to ...`. The reasons for failure can vary, but usually it means there might be something wrong with our plasmid sample! It will be best to reanalyse through a custom alignment for the failed samples later on!
 
 ![Denovo05](../fig/EPI2ME/denovo05.png)
+
+To access the output, scroll down from the screen above and click on `output`.
+
+![Denovo06](../fig/EPI2ME/denovo06.png)
+
+This should open up a File Explorer tab where all the EPI2ME analysis are stored by default. Find the folder with the corresponding `Analysis ID`.
+
+![Denovo07](../fig/EPI2ME/denovo07.png)
+
+In the folder with the corresponding `Analysis ID`, we should find the *.fasta* files for the samples where De novo assembly was succesfull. We can then take these *.fasta* files and upload them to benchling/BLAST etc for alignment!
+
+![Denovo08](../fig/EPI2ME/denovo08.png)
+
+#### Custom Alignment
 
 [Nextflow]: https://www.nextflow.io/
