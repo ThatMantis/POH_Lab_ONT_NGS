@@ -140,12 +140,8 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 > Else we can add the "interactive" flag `-i` to `rm`, e.g. `rm "filename" -i`, which will ask us for confirmation before we delete each file!
 >
 > ### Copy and Moving Files and Folders
-
-{: .warning}
-
-> ## Copy and Moving Files and Folders
 >
-> -`cp` and `mv`: Copy and Move files from one location to another, from the command line alone.
+> -`cp` and `mv`: Copy and Move files from one location to another, from the command line alone. E.g.:
 > 
 > ~~~
 > cp abc.txt folder/abc.txt #copies the file "abc.txt" from the current directory to a folder called "folder"
@@ -158,7 +154,8 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 > If not confident with the shell when copying or moving files, just do so from the windows explorer!
 > Else likewise, additional flag, `mv -i` (or `mv --interactive`), can be used to make `mv` ask you for confirmation before overwriting.
 > 
-{: .callout}
+{: .warning}
+
 
 ### Other Commands
 
