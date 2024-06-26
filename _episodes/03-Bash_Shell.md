@@ -130,25 +130,33 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `rm`: "Remove", Remove a file/folder
 
-> ## Deleting Is Forever
+> ## Powerful Commands We Might Want To Avoid For Now
 >
+> ### Deleting is Forever!!!
+> 
+> - `rm`: "Remove", Remove a file/folder
 > The Shell does not have a trash bin for us to recover data that we have deleted, accidentally or not! When we delete files, they are gone for good (almost)!
 > If not confident with the shell when deleting stuff, just delete from the windows explorer!
 > Else we can add the "interactive" flag `-i` to `rm`, e.g. `rm "filename" -i`, which will ask us for confirmation before we delete each file!
-> 
+>
+> ### Copy and Moving Files and Folders
+
 {: .warning}
 
 > ## Copy and Moving Files and Folders
 >
-> Rather than using Ctrl-C and Ctrl-V to move files/folders within the Ubuntu Virtual Environment, we can use the commands `cp` and `mv`(and the Windows Explorer obviously lol).
+> -`cp` and `mv`: Copy and Move files from one location to another, from the command line alone.
+> 
 > ~~~
 > cp abc.txt folder/abc.txt #copies the file "abc.txt" from the current directory to a folder called "folder"
 > cp abc.txt folder/def.txt #copies the file "abc.txt" from the current directory to a folder called "folder", while also renaming it to "def.txt"
 > mv abc.txt folder/def.txt #MOVES the file "abc.txt" from the current directory to a folder called "folder", while also renaming it to "def.txt"
 > ~~~
 > {: .bash}
->
-> Do be careful when specifying the target file name, since `mv` will silently overwrite any existing file with the same name!. An additional flag, `mv -i` (or `mv --interactive`), can be used to make `mv` ask you for confirmation before overwriting.
+> 
+> Do be careful when specifying the target file name, since `mv` will silently overwrite any existing file with the same name!.
+> If not confident with the shell when copying or moving files, just do so from the windows explorer!
+> Else likewise, additional flag, `mv -i` (or `mv --interactive`), can be used to make `mv` ask you for confirmation before overwriting.
 > 
 {: .callout}
 
@@ -169,7 +177,7 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `*`: Two functions. 
 - 1. `*` alone indicates all files/folders in the current working directory
-- 2. Having a letter upstream/downstream indicates all files/folders that have the same name as what has been typed
+  2. Having a letter upstream/downstream indicates all files/folders that have the same name as what has been typed
 - - `*abc`: refers to all files/folders with a name that ends with "abc", regardless of whatever is before it. e.g. "1_abc", "2_abc", "1234567890_abc" etc will all be highlighted
 - - `abc*`: refers to all files/folders with a name that starts with "abc", e.g. "abc_1", "abc_2", "abc_12345abc" etc
 - - `*abc*`: a hybrid of the two, e.g. "12345_abc_asdtf", "asd_abc_123sada", "abc" etc.   
