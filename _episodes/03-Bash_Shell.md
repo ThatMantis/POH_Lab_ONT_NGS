@@ -141,7 +141,7 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 >
 > ### Copy and Moving Files and Folders
 >
-> -`cp` and `mv`: Copy and Move files from one location to another, from the command line alone. E.g.:
+> - `cp` and `mv`: Copy and Move files from one location to another, from the command line alone. E.g.:
 > 
 > ~~~
 > cp abc.txt folder/abc.txt #copies the file "abc.txt" from the current directory to a folder called "folder"
