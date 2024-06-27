@@ -139,7 +139,7 @@ From the **FASTQ** file, we know that each ATGC base called has a corresponding 
 
 The default Qscore set in MinKNOW has a Qscore of 10, which translates to an estimated probability of error of 10%. A Qscore of 20 (which is the current expected accuracy for R10, V14 kits) will then mean an estimated probability of error of 1%. The translatation of each ASCII character to their respective Qscores can be found in the [table below].
 
-![FASTQ vs FASTQ](../fig/MinKNOW/4.png)
+![Phred base 33 Score Translations](../fig/MinKNOW/5.png)
 
 However, do note that the Qscore set for filtering *Pass* vs *Fail* reads filter based on the **average Qscore for the entire read**, and not based on individual Qscores of each base within each read! Hence, even if the read has an average Qscore of above e.g. 20, there can still be individual bases/locations within a read that has Qscores that fall below the filter! This could depend on a variety of factors, including properties of the sequence itself, such as at locations of a single multiple repeated base, where we can expect the Qscore to be lower naturally.
 
