@@ -11,7 +11,7 @@ Thereafter, we will go through a (very very) quick and basic crash course on usi
 
 It is hoped that through this quick and basic workshop, new users will be able to better understand, analyze and make use of NGS data -- especially from the ONT platform; so as to aid them in their experiments.
 
-![Intro](../fig/intro.png)
+![Intro](./fig/intro.png)
 
 <!-- this is an html comment -->
 
