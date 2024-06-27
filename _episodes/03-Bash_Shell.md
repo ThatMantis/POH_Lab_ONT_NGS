@@ -36,7 +36,10 @@ Notice how limited the run options on MinKNOW are compared to the options availa
 
 Hence, we can probably now see why we need to use the Bash Shell/Command line -- so that we can better tap on the plethora of bioinformatics packages and workflows available out there in the world, and to package them into a *workflow* more suited to our project/needs! However, this means that we need to learn how to use the Bash Shell/Command Line, and to get familiar with it, before we can do the aforementioned -- and which we will get to try later after Lunch in a few exercises and scenarios!!! And therefore this will be the objective of this chapter.
 
-Disclaimer: Do note that the intention of this chapter is to not make us experts at using the Bash Shell -- 1 Hour is probably not enough! Instead we will be going through the basics of the Bash Shell, and linking it as much as possible to GUIs, such as the Windows Explorer, so that it becomes less daunting for the beginner so that they can start using the other command line based data processing programs we will go thru for the later half of the workshop! To really "git gud" at using the Bash Shell/Command Line will require time, practice, (and google/stackoverflow :p) !!!
+> ## Disclaimer:
+> Do note that the intention of this chapter is to not make us experts at using the Bash Shell -- 1 Hour is probably not enough! Instead we will be going through the basics of the Bash Shell, and linking it as much as possible to GUIs, such as the Windows Explorer, so that it becomes less daunting for the beginner so that they can start using the other command line based data processing programs we will go thru for the later half of the workshop! To really "git gud" at using the Bash Shell/Command Line will require time, practice, (and google/stackoverflow :p) !!!
+>
+{: .idea}
 
 ### Navigating Files and Directories
 
