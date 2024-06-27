@@ -133,7 +133,19 @@ Meanwhile the **FASTQ** format is in a way similar to the **FASTA** format, but 
 
 ### Quality Scores (Qscore)
 
+From the **FASTQ** file, we know that each ATGC base called has a corresponding **Quality Score**, which is typically encoded in Phred +33 format and is recorded in ASCII format (so that the number of bases can be exactly equal to the number of characters in line 4 of each FASTQ read). This quality score reflects the confidence by the sequencer for the estimated error rate for each of the basecalled bases, and is on a negative Log(10) scale. Hence higher Qscores reflect a greater confidence in the accuracy of a predicted base, and vice versa for lower Qscores. 
+
+![Qscore Equation](../fig/MinKNOW/7.png)
+
+The default Qscore set in MinKNOW has a Qscore of 10, which translates to an estimated probability of error of 10%. A Qscore of 20 (which is the current expected accuracy for R10, V14 kits) will then mean an estimated probability of error of 1%. The translatation of each ASCII character to their respective Qscores can be found in the [table below].
+
+![FASTQ vs FASTQ](../fig/MinKNOW/4.png)
+
+However, do note that the Qscore set for filtering *Pass* vs *Fail* reads filter based on the **average Qscore for the entire read**, and not based on individual Qscores of each base within each read! Hence, even if the read has an average Qscore of above e.g. 20, there can still be individual bases/locations within a read that has Qscores that fall below the filter! This could depend on a variety of factors, including properties of the sequence itself, such as at locations of a single multiple repeated base, where we can expect the Qscore to be lower naturally.
+
+
 [CUDA toolkit version 11.8]: https://developer.nvidia.com/cuda-11-8-0-download-archive
 [figure below illustrates the basecalling process]: https://nanoporetech.com/platform/technology/basecalling
 [**FASTQ**]: https://en.wikipedia.org/wiki/FASTQ_format
 [image above]: https://compgenomr.github.io/book/fasta-and-fastq-formats.html
+[table below]: https://www.drive5.com/usearch/manual/quality_score.html
