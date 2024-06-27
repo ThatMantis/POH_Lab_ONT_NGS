@@ -72,7 +72,7 @@ The next page brings us to the "Run Options", where we can select the
 ![Run Setup 03](../fig/MinKNOW/run03.png)
 
 Next is the "Analyze" page, where we can select:
-- Basecalling options: select "*Super-accurate Basecalling*" for best results
+- Basecalling options: select "*Super-accurate Basecalling*" for best results. More about basecalling will be described below.
 - Barcoding options: ONLY AVAILABLE IF LIBRARY PREP KITS WITH BARCODING FROM ONT ARE USED! If ONT barcoding kits are used, select "*Enabled*", "*Trim barcodes*" and "*Detect mid read barcodes*"
 
 ![Run Setup 04](../fig/MinKNOW/run04.png)
@@ -101,4 +101,39 @@ Lastly, users may also choose to stop the run prematurely to save their time whe
 
 ![Run Monitoring 03](../fig/MinKNOW/monitor03.png)
 
-### 
+### Data Output and Basecalling
+
+The raw data output from the sequencer comes in two formats. The "rawest" data is in the form of **.FAST5** (for older e.g. R9 generation flow cells), and **.POD5** for newer (e.g. R10 onwards) flow cells -- also known as "Squiggles", as they hold the raw current intensity data recorded by each pore. This format however is unreadable by us directly (on e.g. a text editor), and also unusable directly downstream in most cases, and typically has to be converted into the **.FASTQ** format through the process of "**Basecalling**", which is the process of converting the "Squiggles" (or electrical signal) into the actual "ATGC" bases. This conversion process typically relies on machine learning and neural networks which have been trained on training data at the ONT side. The "Basecalling options" we chose above during the run setup in MinKNOW affects the accuracy of this conversion, and hence the "Super-accurate" basecalling model should be always chosen whenever available for best results (this however is dependent on the compute power of the computer used for basecalling; where a computer with an Nvidia dedicated GPU capable of running [CUDA toolkit version 11.8] as of June 2024 is required for running the "*High Accuracy*" and "*Super Accurate*" models. Nevertheless, the Nanopore Desktop in the lab is capable of running the "*Super Accurate*", and hence should be always used.). This **.FASTQ** format is the one subsequently used/required as the input to most bioinformatics workflows. The [figure below illustrates the basecalling process].
+
+![Basecalling](../fig/MinKNOW/3.png)
+
+### FASTQ Format
+
+While the data stored in the **FASTQ** format looks complicated and confusing, we can understand the [**FASTQ**] format with a little decoding, and compare it with the **FASTA** format that some may already be familiar with.
+
+![FASTQ vs FASTQ](../fig/MinKNOW/4.png)
+
+The [image above] shows the **FASTA** format on the left, and **FASTQ** on the right.
+
+The **FASTA** file consists of 2 lines per entry, repeated every 2 lines for each entry.
+
+|Line|Description|
+|----|-----------|
+|1|**“Description line”**, starts with a “>” symbol. Contains information about the sequence. E.g. ID, name, gene names etc.|
+|2|The **actual** nucleotide (or protein) **sequences**|
+
+Meanwhile the **FASTQ** format is in a way similar to the **FASTA** format, but with 4 lines per entry. Each 4 lines corresponds to the data from **ONE** read sequence from the sequencer. This is the typical "raw" data we will deal with from most NGS platforms, including Illumina short read sequencers, and even some Sanger platforms.
+
+|Line|Description|
+|----|-----------|
+|1|**Sequence Identifier**, starts with a “*@*”. Also includes information about the sequence, but instead of gene names etc., it is usually information about the sequencer machine etc.|
+|2|The **actual DNA sequence**|
+|3|**Usually just a “+” symbol**. Marks the end of the sequence|
+|4|**Quality scores** for each base, encoded in Phred +33 format typically for most modern platforms. MUST have the same number of characters as the actual sequence|
+
+### Quality Scores (Qscore)
+
+[CUDA toolkit version 11.8]: https://developer.nvidia.com/cuda-11-8-0-download-archive
+[figure below illustrates the basecalling process]: https://nanoporetech.com/platform/technology/basecalling
+[**FASTQ**]: https://en.wikipedia.org/wiki/FASTQ_format
+[image above]: https://compgenomr.github.io/book/fasta-and-fastq-formats.html
