@@ -28,7 +28,7 @@ For instance, if we were to try running basecalling seperately (via Analysis>Bas
 
 ![Basecalling on MinKNOW](../fig/basecalling_on_MinKNOW.png)
 
-Compared to trying basecalling seperately using Guppy on the Command Line...
+Compared to trying basecalling seperately using Guppy on the Command Line... And this is just 1/5 of the entire list!
 
 ![Basecalling on Guppy via CMD](../fig/basecalling_on_guppy_cmd.png)
 
