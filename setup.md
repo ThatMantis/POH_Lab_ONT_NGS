@@ -15,7 +15,9 @@ This shell is what we will be using in the second half of the workshop after lun
 > Computers running the Microsoft Windows operating systems  do not automatically have a Unix Shell program installed. They have Powershell and the DOS shell instead. 
 > 
 > However, since the release of Windows 10, Microsoft has provided the Windows Subsystem for Linux (WSL), that allows a complete virtual Linux system hosted on your Windows machine locally. This allows developers to access the power of both Windows and Linux at the same time on a Windows machine. 
+>
 > While users can install multiple Linux distributions at the same time, I recommed sticking to the default (Ubuntu), especially for beginners.
+>
 > To install WSL and the default Ubuntu distribution, users can follow the instructions hyperlinked from Microsoft for both [Windows 10 and Windows 11]. But in summary, the steps will look something like this:
 > 
 > 1. find the PowerShell application and open it _in Administrator mode_ (right click on the application icon to run in Administrator mode)
@@ -69,6 +71,7 @@ This shell is what we will be using in the second half of the workshop after lun
 > or [(KDE) Konsole](https://konsole.kde.org/)
 > or [xterm](https://en.wikipedia.org/wiki/Xterm),
 > which can be found via the applications menu or the search bar.
+> 
 > If your machine is set up to use something other than bash, you can run it by opening a terminal and typing `bash`.
 >
 {: .linux}
