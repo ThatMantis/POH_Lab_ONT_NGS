@@ -61,6 +61,19 @@ In the example terminal above, the first line shows only a **prompt**, which ind
 >
 {: .warning}
 
+> ## Try it!
+> 
+> Open a shell window and type two commands, one at a time:  First, type `ls`<kbd>Enter</kbd>.  Then
+> type `ls -a`<kbd>Enter</kbd>. Do you see any differences between the output of the two commands?
+> 
+> > 
+> > ## Solution
+> >
+> > The `ls -a` command may show some additional files that begin with a `.`. The `-a` flag tells `ls`
+> > to list *all* the files, whether they are hidden or not.
+> {: .solution}
+{: .challenge}
+
 ![Basecalling on Guppy via CMD](../fig/ubuntu_vs_fileexplorer.png)
 
 On the left is the Ubuntu terminal, where we can see the output from the commmand `ls -X -A` (not `ls` here!), and on the right we can see the files and folders available in the same directory where `ls` was entered, viewed from the windows file explorer. Notice the similarities between the two! In the Ubuntu terminal, folders are highlighted in blue, while the other files are highlighted in white (note other colors exist for other file types, just not shown here!)!
