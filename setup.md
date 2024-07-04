@@ -30,7 +30,8 @@ This shell is what we will be using in the second half of the workshop after lun
 > > 2. Type `\\wsl$` in the address bar, and press `Enter`
 > >
 > > OR: Enter `\\wsl$` in the run command. i.e.: `[WINDOWS KEY + R] > \\wsl$ > [ENTER]`
-> >Our personal Linux files will typically be stored at: `\\wsl$\Ubuntu\home\<yourname>`. Where <yourname> is the username you defined during installation.
+> >
+> > Our personal Linux files will typically be stored at: `\\wsl$\Ubuntu\home\<yourname>`. Where <yourname> is the username you defined during installation.
 > >
 > {: .idea}
 > 
