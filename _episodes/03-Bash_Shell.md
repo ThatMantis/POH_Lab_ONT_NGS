@@ -64,14 +64,15 @@ In the example terminal above, the first line shows only a **prompt**, which ind
 > ## Try it!
 > 
 > Open a shell window and type two commands, one at a time:  First, type `ls`<kbd>Enter</kbd>.  Then
-> type `ls -a`<kbd>Enter</kbd>. Do you see any differences between the output of the two commands?
+> type `ls -X -A`<kbd>Enter</kbd>. Do you see any differences between the output of the two commands?
 > 
 > > 
 > > ## Solution
-> >
-> > The `ls -a` command may show some additional files that begin with a `.`. The `-a` flag tells `ls`
-> > to list *all* the files, whether they are hidden or not.
+> > 
+> > The `ls -X -A` command may show some additional files that begin with a `.`, and sorts the output in Alphabetical order. The `-X` flag tells `ls` to sort the output alphabetically by entry extension, while the `-A` flag tells `ls` to list (almost) *all* the files, whether they are hidden or not.
 > {: .solution}
+> 
+> Now, try `ls --help`! 
 {: .challenge}
 
 ![Basecalling on Guppy via CMD](../fig/ubuntu_vs_fileexplorer.png)
