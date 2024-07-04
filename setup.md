@@ -41,12 +41,14 @@ This shell is what we will be using in the second half of the workshop after lun
 {: .windows}
 
 > ## Mac OS X users
-> For Mac computer users, the default Unix Shell is either `bash`  or  `zsh` and it is available via the Terminal Utilities program within your Applications folder.
+> For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash. For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh. Your default shell is available via the Terminal program within your Utilities folder.
 >
 > To open Terminal, try one or both of the following:
 > * Go to your Applications. Within Applications, open the Utilities folder. Locate Terminal in the Utilities folder and open it.
 > * Use the Mac ‘Spotlight’ computer search function. Search for: `Terminal` and press <kbd>Return</kbd>.
 >
+> To check if your machine is set up to use something other than Bash, type echo $SHELL in your terminal window.
+> If your machine is set up to use something other than Bash, you can run it by opening a terminal and typing bash.
 >  
 > > ## Homebrew and iTerm2
 > > 
@@ -54,14 +56,15 @@ This shell is what we will be using in the second half of the workshop after lun
 > > - While the default terminal application on MacOSX is pretty good, the [iTerm2](https://www.iterm2.com/) application is an excellent alternative to the standard MacOSX terminal.
 > > 
 > {: .idea}
+> 
 > #### Reference 
 > For more reading, go to[ How to Use Terminal on a Mac](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/)
 {: .osx}
 
 > ## Native Linux users
-> You should be set to go! :) 
-> The default Unix Shell for Linux operating systems is usually Bash.
-> On most versions of Linux, it is accessible by running the [(Gnome) Terminal](https://help.gnome.org/users/gnome-terminal/stable/)
+> You should be set to go! :)
+> 
+> The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the [(Gnome) Terminal](https://help.gnome.org/users/gnome-terminal/stable/)
 > or [(KDE) Konsole](https://konsole.kde.org/)
 > or [xterm](https://en.wikipedia.org/wiki/Xterm),
 > which can be found via the applications menu or the search bar.
@@ -79,3 +82,10 @@ This shell is what we will be using in the second half of the workshop after lun
 
 [Windows 10 and Windows 11]: https://learn.microsoft.com/en-us/windows/wsl/install
 [here]: https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/
+
+<!-- this is an html comment -->
+
+{% comment %} This is a comment in Liquid {% endcomment %}
+
+<!-- References: https://swcarpentry.github.io/shell-novice/index.html -->
+<!-- References: https://gtk-teaching.github.io/Intro-to-bash/setup.html -->
