@@ -180,7 +180,7 @@ Now that we have a basic understanding of what the Bash Shell is, and how it rel
 
 - `#`: Comment, not read by the command line.
 - `echo`: Similar to a "Print" command on Python etc.
-- `|`: used to pipe and connect commands entered on the same command line together, by piping the output from the first command to the next command that is seperated by the "|".
+- `|`: used to pipe and connect commands entered on the same command line together, by piping the output from the first command to the next command that is seperated by the `|`.
 
 ### Shortcuts
 
