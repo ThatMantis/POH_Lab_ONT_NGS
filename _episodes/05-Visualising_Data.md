@@ -45,7 +45,7 @@ An example entry from a .SAM file is shown in the image below with the various f
 10. SEQ: Read Sequence
 11. QUAL: Read Quality. With "*" meaning such information is not available.
 
-![SAM File](../fig/Visualising/Sam File.png)
+![SAM File](../fig/Visualising/Sam_File.png)
 
 #### CIGAR Strings
 
@@ -57,11 +57,29 @@ The CIGAR string is made up of <integer><symbol> pairs. For each query base, how
 
 ### IGV Viewer
 
-FIXME
+Rather than viewing the alignment information of each read individually from a .SAM file. Most people will likely use a genome viewer/browser, such as the [IGV viewer], which is a stand-alone GUI browser that can be installed locally, allowing for fast access and ease of navigation and visualisation. In order to use IGV, we will need both the **reference sequence** (in .FASTA or .GB format, both of which can be downloaded from e.g. Benchling), and the **alignment files** (both .BAM and .BAI).
+1. Open IGV.
+2. Load our reference sequence file (.fasta or .gb) into IGV using the **"Load Genomes from File"** option under the "Genomes" tab.
+3. Load both our .BAM and .BAI files using the **"Load from File"** option under the **"File"** tab.
+
+> ## Merging .BAM and .BAI files
+>
+> As the nanopore sequencer naturally generates one .fastq (and hence one corresponding .bam and .bai) file about every 10 minutes, we will obtain many .bam and .bai files for just one sample. Opening all these will likely render us impossible to view the tracks properly in IGV. To solve this issue, we can merge all the .bam and .bai files for each sample together using the following commands in the command line. And then upload this single merged .bam and .bai file onto IGV for better clarity.
+> 
+> ~~~
+> # E.g. if all the .bam and .bai files of the same sample are in each unique directory
+> # We can first merge the .bam files
+> samtools merge merged_file.bam *.bam
+> # Followed by creating the .bai index file for the merged .bam file.
+> samtools index merged_file.bam
+> ~~~
+> {: .bash}
+>
+{: .idea}
 
 ### SAM2TSV
 
-[SAM2TSV] is another powerful tool that we can use to visualise the alignment files, by printing the alignments as a TAB delimited file -- which we can either save as a .tsv file, or pipe into our own other codes and pipelines for downstream data analysis. It is part of JVarkit, a set of more than 100 java-based tools for bioinformatics. This package has not been included in the installation script, due to potential issues with Java versions. Here, we will first install JVarkit from the command line:
+[SAM2TSV] is another powerful tool that we can use to process (and visualise) the alignment files, by printing the alignments as a TAB delimited file -- which we can either save as a .tsv file, or pipe into our own other codes and pipelines for downstream data analysis. It is part of JVarkit, a set of more than 100 java-based tools for bioinformatics. This package has not been included in the installation script, due to potential issues with Java versions. Here, we will first install JVarkit from the command line:
 
 ~~~
 sudo apt update
@@ -136,3 +154,4 @@ Now, lets try on the merged .bam file we generated through EPI2ME earlier!
 [tool]: https://broadinstitute.github.io/picard/explain-flags.html
 [Heng Li et al.]: https://academic.oup.com/bioinformatics/article/25/16/2078/204688
 [image]: https://timd.one/blog/genomics/cigar.php
+[IGV viewer]: https://igv.org/doc/desktop/
