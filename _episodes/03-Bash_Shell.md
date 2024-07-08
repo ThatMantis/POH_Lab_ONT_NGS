@@ -72,7 +72,9 @@ In the example terminal above, the first line shows only a **prompt**, which ind
 > > The `ls -X -A` command may show some additional files that begin with a `.`, and sorts the output in Alphabetical order. The `-X` flag tells `ls` to sort the output alphabetically by entry extension, while the `-A` flag tells `ls` to list (almost) *all* the files, whether they are hidden or not.
 > {: .solution}
 > 
-> Now, try `ls --help`! 
+> Now, try `ls --help`!
+>
+> And lets try changing our current directory using the command `cd`!
 {: .challenge}
 
 ![Basecalling on Guppy via CMD](../fig/ubuntu_vs_fileexplorer.png)
@@ -248,13 +250,13 @@ done
 
 > ## Create a Directory in User's Home for this Workshop
 > 
-> Create a directory named "120724_NGS_Workshop" within the User's home directory.
+> Create a directory named "NGS_Workshop" within the User's home directory.
 > 
 > > ## Solution
 > >
 > > ~~~
 > > cd ~ #to direct us to the User Home directory
-> > mkdir 120724_NGS_Workshop
+> > mkdir NGS_Workshop
 > > ~~~
 > >{: .bash}
 > >
