@@ -1,5 +1,5 @@
 ---
-title: "3-Introduction to the Bash Shell"
+title: "3. Introduction to the Bash Shell"
 teaching: 60
 source: md
 questions:
