@@ -1,5 +1,5 @@
 ---
-title: "Assembly"
+title: "8. Assembly"
 teaching: 90
 source: md
 questions:
