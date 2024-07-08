@@ -250,13 +250,13 @@ done
 
 > ## Create a Directory in User's Home for this Workshop
 > 
-> Create a directory named "NGS_Workshop" within the User's home directory.
+> Create a directory named "ngs_workshop" within the User's home directory.
 > 
 > > ## Solution
 > >
 > > ~~~
 > > cd ~ #to direct us to the User Home directory
-> > mkdir NGS_Workshop
+> > mkdir ngs_workshop
 > > ~~~
 > >{: .bash}
 > >
@@ -286,7 +286,7 @@ done
 
 > ## Absolute vs Relative Paths
 >
-> Starting from `/home/user/120724_NGS_Workshop/`,
+> Starting from `/home/user/ngs_workshop/`,
 > which of the following commands could one use to navigate to the home directory,
 > which is `/home/user`?
 >
@@ -296,7 +296,7 @@ done
 > 4. `cd ../..`
 > 5. `cd ~`
 > 6. `cd home`
-> 7. `cd ~/120724_NGS_Workshop/..`
+> 7. `cd ~/ngs_workshop/..`
 > 8. `cd`
 > 9. `cd ..`
 >
