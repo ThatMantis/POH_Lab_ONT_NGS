@@ -51,7 +51,7 @@ An example entry from a .SAM file is shown in the image below with the various f
 
 Among all the information presented in an alignment file shown above. One of the most useful information is found in the CIGAR String. CIGAR stands for Concise Idiosyncratic Gapped Alignment Report. And the CIGAR string itself is a compressed representation of how a query sequence aligns to a reference genome, and are used by the SAM/BAM file formats. 
 
-The CIGAR string is made up of <integer><symbol> pairs. For each query base, how it aligns to the reference is denoted by a single <symbol>, and adjavent matching <symbols> are counted and collapsed for a more succint representation (i.e. `MMDDDDMMM` becomes `2M4D3M`). A quick summary of the CIGAR symbols can be found in the [image] below.
+The CIGAR string is made up of (Integer)(Symbol) pairs. For each query base, how it aligns to the reference is denoted by a single (symbol), and adjacent matching (symbols) are counted and collapsed for a more succint representation (i.e. `MMDDDDMMM` becomes `2M4D3M`). A quick summary of the CIGAR symbols can be found in the [image] below.
 
 ![CIGAR Symbols](../fig/Visualising/CIGAR.png)
 
