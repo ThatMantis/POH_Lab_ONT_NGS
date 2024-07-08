@@ -1,5 +1,5 @@
 ---
-title: "4-Visualising Processed Data"
+title: "4. Visualising Processed Data"
 teaching: 60
 source: md
 questions:
