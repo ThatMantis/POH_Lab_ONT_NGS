@@ -313,4 +313,21 @@ done
 > {: .solution}
 {: .challenge}
 
+
+### Anaconda
+
+For the chapters after lunch, we will be making extensive use of the Bash Shell to run various bioinformatics tools. While most of the tools are simple enough without much dependencies (on other libraries and packages etc.) and can be easily installed using a single line of `sudo apt` and `pip install` etc., there are also many other packages with many dependencies that could cause issues when not handled properly. For these tools, we can make use of package managers such as Anaconda to handle these installations.
+
+If you do not have Anaconda installed on your system yet, we will need to install it here first. Here, we will be installaing Miniconda -- a minimal installation of Anaconda, which is much smaller and has a faster installation, allowing us to install it in just a few minutes during this workshop!
+
+~~~
+cd ~
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+~~~
+{: .bash}
+
+Follow through all the prompts and press (and hold) the <kbd>Return/Enter</kbd> etc for the Terms of Use, and enter `Yes` as appropriate! 
+
+The whole installation should take less than 5 minutes.
 [setup]: https://thatmantis.github.io/POH_Lab_ONT_NGS/setup.html
