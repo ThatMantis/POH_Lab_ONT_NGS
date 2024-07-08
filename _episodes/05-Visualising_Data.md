@@ -45,7 +45,7 @@ An example entry from a .SAM file is shown in the image below with the various f
 10. SEQ: Read Sequence
 11. QUAL: Read Quality. With "*" meaning such information is not available.
 
-![SAM File](../fig/Visualising/"Sam File.png")
+![SAM File](../fig/Visualising/Sam File.png)
 
 #### CIGAR Strings
 
