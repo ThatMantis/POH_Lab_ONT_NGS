@@ -1,5 +1,5 @@
 ---
-title: "Variant Calling"
+title: "7. Variant Calling"
 teaching: 90
 source: md
 questions:
