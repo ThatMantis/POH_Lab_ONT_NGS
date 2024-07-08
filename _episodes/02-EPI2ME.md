@@ -1,5 +1,5 @@
 ---
-title: "2-EPI2ME"
+title: "EPI2ME"
 teaching: 30
 source: md
 questions:
