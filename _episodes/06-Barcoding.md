@@ -1,5 +1,5 @@
 ---
-title: "Barcoding and Decoding"
+title: "5-Barcoding and Decoding"
 teaching: 90
 source: md
 questions:
