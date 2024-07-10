@@ -99,11 +99,31 @@ Having obtained a good set of barcodes, we can then barcode our sample (such as 
 
 Similar to barcode generation, any app/program etc. can be used for demultiplexing. Here, we will use the [demultiplex] program on the command line. To use the [demultiplex] program, we will need both the input raw *WkShop_VC.fastq* file, as well as a tab-seperated-value (TSV) file containing the labelled barcodes in NP_WkShop_VC_BC_list.tsv. As we will be using the `match` tool, we can provide both the forward and reverse barcodes in the .tsv file. However, do note here that the two barcodes for each sample should both be in the same direction (i.e. the sequence of the e.g. reverse primer used to generate the PCR amplicon should be reverse complemented here, so that both barcodes are in the same direction on the same strand!)!
 
-~~~
+The one-line command below should be able to demultiplex the reads into the 4 distinct samples accordingly.
+1. `demultiplex match`: tells the computer we want to use the `match` tool from the `demultiplex` program.
+2. `NP_WkShop_VC_BC_list.tsv`: the .tsv file containing our labelled barcodes -- with the "reverse" barcode being reverse complemented so both barcodes are in the same direction, on the same strand.
+3. `-m 2`: to allow for `2` mismatches when demultiplexing. Note this is the number or errors, not the Sequence-Levenshtein distance itself!
+4. `-d`: to use Sequence-Levenshtein distance when allowing for the mismatch when multiplexing.
+5. `-f`: to allow the program to automatically classify any reads which are detected to belong to more than 1 sample into a separate file.
 
+~~~
+demultiplex match NP_WkShop_VC_BC_list.tsv WkShop_VC.fastq -m 2 -d -f
 ~~~
 {: .bash}
 
+After this, we should see the following files generated. The 4 samples are labelled `BC1` to `BC4`. Reads detected to have barcodes matching more than one sample are classified under `MULTIPLE` (possibly due to read errors etc.), and reads which do not have any of either 2 barcodes detected are classified under `UNKNOWN` (probably due to truncated reads etc).
+
+~~~
+WkShop_VC_BC1.fastq
+WkShop_VC_BC2.fastq
+WkShop_VC_BC3.fastq
+WkShop_VC_BC4.fastq
+WkShop_VC_MULTIPLE.fastq
+WkShop_VC_UNKNOWN.fastq
+~~~
+{: .output}
+
+With that, we have succesfully demultiplexed our raw sequencing .Fastq data into their respective 4 samples! And we may continue to the next step.
 
 [some of the kits]: https://store.nanoporetech.com/sample-prep.html
 [Rapid Barcoding Kits]: https://store.nanoporetech.com/rapid-barcoding-sequencing-kit-96-v14.html
