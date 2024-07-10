@@ -32,7 +32,7 @@ However, MinKNOW (and other ONT's basecalling programs, such as [Guppy]) can onl
 
 In this imaginary experimental scenario for exercise 1, we were unable to solely rely on ONT's barcodes, as the amount of barcodes available from the library preperation kits are limited, and was also impractical to use due to the scale of this imaginary study. Hence multiplexing with our own custom designed barcodes were used instead. In this chapter, we will introduce how we can design our own barcodes and demultiplex them without relying on these ONT programs post basecalling. 
 
-### Barcode Generation
+### 1. Barcode Generation
 
 There are many ways and programs to generate our own custom barcodes, with each of them having their advantages and disadvantages. However, what might be more important is in knowing what to look out for, and the factors to consider when designing our custom barcodes. Perhaps one of the most critical factor is in ensuring the barcodes are completely orthogonal to one another, while still allowing us to account for possible sequencing errors when subsequently demultiplexing them. This can be done by taking into account the Sequence-Levenshtein distance when generating the barcodes. The [Sequence-Levenshtein distance] allows for read errors due to substitutions and indels, in contrast to perhaps the more well-known Hamming distance, which only accounts for read errors due to substitutions. Using the "Sequence-Levenshtein distance" is advised for PacBio/ONT Long Read sequencing technologies, as a large proportion of read errors includes indels; in contrast to mostly substitutions in Illumina short-read sequencers -- and thereby also resulting in more robust barcodes. The formula and some additional light-information for calculating the Sequence-Levenshtein distance is shown in the figure below, obtained from the vignette of the [DNABarcodes] Bioconductor package for R.
 
@@ -51,7 +51,7 @@ mySeqlevSet <- create.dnabarcodes(10, metric="seqlev", heuristic="ashlock", dist
 
 For this exercise, the barcodes have already been generated when preparing the *WkShop_VC.fastq* sample raw data.
 
-### Barcode Testing
+### 2. Barcode Testing
 
 After generating the barcode, we can do a quick test on the barcodes, and any additional sequences we might want to add or like to account for when doing the subsequent downstream demultiplexing. So as to ensure our "Sequence-Levenshtein distance" etc. are not violated when we eventually demultiplex them. To do so, we can make use of the [barcode package] on the command line -- which includes tools for generating barcodes, as well as for testing any other custom generated barcodes.
 
@@ -93,7 +93,7 @@ With that, we can safely move on with using that set of barcodes for our library
 > 
 {: .challenge}
 
-### Demultiplexing
+### 3. Demultiplexing
 
 Having obtained a good set of barcodes, we can then barcode our sample (such as by using barcoding primers through PCR) and library prep and sequence them. After having sequenced and basecalled the samples, we can then demultiplex our raw reads using the .Fastq file. The merged raw reads have been curated and merged into a single .Fastq file for this exercise in *WkShop_VC.fastq*.
 
