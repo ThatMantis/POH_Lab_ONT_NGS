@@ -108,6 +108,9 @@ The one-line command below should be able to demultiplex the reads into the 4 di
 
 ~~~
 demultiplex match NP_WkShop_VC_BC_list.tsv WkShop_VC.fastq -m 2 -d -f
+
+# Optional: remove the original raw .fastq file after demultiplexing:
+rm WkShop_VC.fastq
 ~~~
 {: .bash}
 
