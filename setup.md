@@ -90,7 +90,12 @@ This shell is what we will be using in the second half of the workshop after lun
 
 ## Some files you will need
 
-*After you have a working shell,* you need to download some files to follow this workshop. These files include Nanopore sequencing data files which we will use during exercises in this workshop, and a .sh shell script which we will need to run on the Shell to install some packages necessary to follow along.
+*After you have a working shell,* you need to download some files to follow this workshop. These files include Nanopore sequencing data files which we will use during exercises in this workshop, and a .sh shell script which we will need to run on the Shell to install some packages necessary to follow along. These can be installed through the bash command line/terminal with the following line when in the same directory as where the install.sh script is stored:
+
+~~~
+sudo bash ./install_poh_lab.sh
+~~~
+{: .bash}
 
 
 {% include links.md %}
