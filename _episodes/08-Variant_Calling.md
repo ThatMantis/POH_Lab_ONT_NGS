@@ -238,7 +238,26 @@ done
 
 ### VCF Format
 
+We can open the .vcf files we have generated above using a text editor. Here, we will show the screengrab of the samples BC1, which contains 1 INDEL, and sample BC3, which contains 2 SNPs.
 
+Sample BC1:
+![BC1 vcf file](../fig/VC/vcf_indel.png)
+
+Sample BC3:
+
+
+
+
+
+
+
+> ## Note about QUAL scores
+>
+> Take note that different variant callers will produce a different QUAL score! For instance, compare the QUAL score of the variants in the filtered .vcf file generated using BCFTools vs the .vcf file generated using Medaka!
+> 
+{: .warning}
+
+Alternatively, we can also use IGV to view the called variants -- which might be more useful in a larger genome! To do so, open IGV and load the reference genome file (.fastq or .gb) and alignment files (.bam and .bai), as mentioned in the previous chapter on Visualising Data. The .vcf files can be loaded the same way, using the **"Load from File"** option under the **"File"** pull down menu, just as we have done with the alignment .bam and .bai files. 
 
 
 [bcftools]: https://samtools.github.io/bcftools/
