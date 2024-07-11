@@ -64,7 +64,7 @@ fastqc R10_BL21.fastq  -t 2
 > 
 {: .challenge}
 
-lets take a look at the QC reports!
+Lets take a look at the QC reports!
 
 ### Step 2. Filtering
 
@@ -79,7 +79,7 @@ Now lets run FastQC again on the trimmed.fastq file. We should now see that the 
 
 ### Step 3. Assembly
 
-(Genome) assembly is the process of putting together your reads, short-reads, long-reads or both, into long contiguous sequences (contigs). Again as with everything else, many programs are available for assembly. EPI2ME's Clone Validation Workflow (for plasmid de novo assembly) uses [flye] by default and offers [canu] as an alternative. Both are very capable assemblers, and canu in particular even does sequence correction, trimming, assembly and cleanup all together! However, canu requires much more computational resources to run, and will likely exceed the time available in this workshop to run. Hence, we will explore flye here instead.
+(Genome) assembly is the process of putting together your reads, short-reads, long-reads or both, into long contiguous sequences (contigs). Again as with everything else, many programs are available for assembly. EPI2ME's Clone Validation Workflow (for plasmid de novo assembly) uses [flye] by default and offers [canu] as an alternative. Both are very capable assemblers, canu requires much more computational resources to run, and will likely exceed the time available in this workshop to run. Hence, we will explore flye here instead.
 
 Due to the dependencies required for flye, we will install flye into a new conda environment, as follows:
 
@@ -89,12 +89,12 @@ conda create --name flye -c conda-forge -c bioconda flye
 ~~~
 {: .bash}
 
-Thereafter, we can change into the "flye" environment with `conda activate flye`. We can then run flye on the NanoFilt filtered reads! `--nano-hq ./R10_BL21_trimmed_q15.fastq` Specifies the input file, and `--nano-hq` specifies that the reads are of relatively higher quality (basecalled using **Super-Accurate Basecalling**, and **<5% error** since we NanoFilt filtered at Qscore 15. `--genome-size 4.5m` specifies that we expect the assembly to be about 4.5 million bp (e.coli). `--threads 4` specifies that we will use 4 threads for computing power to speed up the process. `--iterations 3` specifies that we want to polish the assembly 3 times (for better accuracy). `--out-dir ./flye_output` specifies the output we want to store the flye assembled output and temporary files in.
+Thereafter, we can change into the "flye" environment with `conda activate flye`. We can then run flye on the NanoFilt filtered reads! `--nano-hq ./R10_BL21_trimmed_q15.fastq` Specifies the input file, and `--nano-hq` specifies that the reads are of relatively higher quality (requirements are reads basecalled using **Super-Accurate Basecalling**, and **<5% error** -- both of which we fulfilled, since we NanoFilt filtered at Qscore 15). `--genome-size 4.5m` specifies that we expect the assembly to be about 4.5 million bp (e.coli). `--threads 4` specifies that we will use 4 threads for computing power to speed up the process. `--iterations 3` specifies that we want to polish the assembly 3 times (for better accuracy). `--out-dir ./flye_output` specifies the output we want to store the flye assembled output and temporary files in. The final assembled .fasta file is `assembly.fasta`. This step may take a while to run.
 
 ~~~
 # Create a new directory to store the flye-assembled output
 mkdir flye_output
-flye --nano-hq ./R10_BL21_trimmed_q15.fastq --genome-size 4.5m --threads 4 --iterations 3 --out-dir ./flye_output
+flye --nano-hq ./R10_BL21_trimmed.fastq --genome-size 4.5m --threads 4 --iterations 3 --out-dir ./flye_output
 ~~~
 {: .bash}
 
@@ -104,10 +104,31 @@ flye --nano-hq ./R10_BL21_trimmed_q15.fastq --genome-size 4.5m --threads 4 --ite
 >
 {: .warning}
 
-### Step 4. Cleanup
+> ## Check the quality of the Assembly
+>
+> In circumstances where we actually know the reference sequence, we can actually
+>
+> ~~~
+> ## 4.2.3 Check the assembly using assembly-stats
+cd flye_output
+assembly-stats ./assembly.fasta
+
+## 4.2.4 Compare two assemblies using Mummer/DNADiff 
+# Open the file flye_dnadiff.report (in a text editor)
+dnadiff -p flye_dnadiff ../CP053601.1.fasta assembly.fasta
+> 
+{: .challenge}
+
+### Step 4. Error Correction
+
+After assembling our genome, we can further polish the reads to minimise potential errors in our assembly. Once again, many programs are available for error correction, such as [racon], [minipolish], [pilon] and [medaka]. In fact, even the [flye] assembler we just used above has polishing function, which we already polished 3 times! Here we will use medaka to attempt to further polish to see what we can get!
 
 [FastQC]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 [reported to be of relatively lower quality]: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0257521
 [nanofilt]: https://github.com/wdecoster/nanofilt
 [flye]: https://github.com/mikolmogorov/Flye
 [canu]: https://github.com/marbl/canu
+[racon]: https://github.com/isovic/racon
+[minipolish]: https://github.com/rrwick/Minipolish
+[pilon]: https://github.com/broadinstitute/pilon
+[medaka]: https://github.com/nanoporetech/medaka
