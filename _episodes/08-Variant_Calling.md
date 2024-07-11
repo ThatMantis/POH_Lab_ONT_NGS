@@ -176,6 +176,10 @@ We will first need to install Medaka, which was not included in the install.sh s
 ~~~
 # Create a new conda environment "medaka", and install the Medaka package.
 conda create -n medaka -c conda-forge -c bioconda medaka
+
+# AFTER INSTALLING MEDAKA!!!
+# Activate the conda environment containing medaka
+conda activate medaka
 ~~~
 {: .bash}
 
