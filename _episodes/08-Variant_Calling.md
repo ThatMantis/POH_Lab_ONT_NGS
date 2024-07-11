@@ -244,11 +244,19 @@ Sample BC1:
 ![BC1 vcf file](../fig/VC/vcf_indel.png)
 
 Sample BC3:
+![BC3 vcf file](../fig/VC/vcf_2snp.png)
 
+In the .vcf files, we will see the a few information (marked with 2 hashes, `##`) at the top. Amongst this information, first is the header, which defines that the file format is a VCF file. This are followed by the time and date the file was created, the version and program used to generate the VCF files, the command line parameters used, as well as some other additional information.
 
-
-
-
+The actual information on the variations called are at below these information headers, starting with `#CHROM`. The content of these actual output are as below. Ideally, the information in the first 7 columns will be enough for most use cases.
+1. `CHROM`: The name of the reference sequence; or the name of the chromosome etc in larger reference files where multiple chromosomes are present.
+2. `POS`: Position within the reference sequence where the variation occurs
+3. `ID`: Usually a `.`, until we add annotation information 
+4. `REF`: The reference genotype
+5. `ALT`: The alternate (variant called) genotype in our reads 
+6. `QUAL`: Phred-scaled probability that the observed variant exists at this site (higher is better)
+7. `FILTER`: A `.` if no quality filters have been applied. A `PASS` if a filter is applied, and/or the name of the filters this variant failed.
+8. `INFO`, `FORMAT`, `SAMPLE`: Additional information (on the variants etc). For more information, refer to the [documentation for the VCF v4.2 file format].
 
 
 > ## Note about QUAL scores
@@ -263,3 +271,4 @@ Alternatively, we can also use IGV to view the called variants -- which might be
 [bcftools]: https://samtools.github.io/bcftools/
 [medaka]: https://github.com/nanoporetech/medaka
 [Sniffles]: https://github.com/fritzsedlazeck/Sniffles
+[documentation for the VCF v4.2 file format]: https://samtools.github.io/hts-specs/VCFv4.2.pdf
