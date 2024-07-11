@@ -68,10 +68,10 @@ Lets take a look at the QC reports!
 
 ### Step 2. Filtering
 
-Since we can see that the head quality indeed is of lower quality. Lets do some head and tail cropping of the reads, since we are doing long read sequencing here and can afford to! We will crop the head and tail 150bp, which is generally the region historically [reported to be of relatively lower quality]. To do so, we will use the program [nanofilt]. `--headcrop 150 --tailcrop 150` crops the first and last 150bp of each read, `-l 2000` filters out reads shorter than 2000 bp. Lets also try `-q 15` to filter off reads with Qscore below 15. `> R10_BL21_trimmed.fastq` pipes and saves the output into "R10_BL21_trimmed.fastq"; else NanoFilt will spit the output directly onto the command line -- try it for fun!
+Since we can see that the head quality indeed is of lower quality. Lets do some head and tail cropping of the reads, since we are doing long read sequencing here and can afford to! We will crop the head and tail 150bp, which is generally the region historically [reported to be of relatively lower quality]. To do so, we will use the program [nanofilt]. `--headcrop 150 --tailcrop 150` crops the first and last 150bp of each read, `-l 2000` filters out reads shorter than 1000 bp. Lets also try `-q 15` to filter off reads with Qscore below 15. `> R10_BL21_trimmed.fastq` pipes and saves the output into "R10_BL21_trimmed.fastq"; else NanoFilt will spit the output directly onto the command line -- try it for fun!
 
 ~~~
-NanoFilt R10_BL21.fastq -q 13 -l 2000 --headcrop 150 --tailcrop 150 > R10_BL21_trimmed.fastq
+NanoFilt R10_BL21.fastq -q 13 -l 1000 --headcrop 150 --tailcrop 150 > R10_BL21_trimmed.fastq
 ~~~
 {: .bash}
 
