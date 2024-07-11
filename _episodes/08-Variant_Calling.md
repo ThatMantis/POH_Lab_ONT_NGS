@@ -246,7 +246,7 @@ Sample BC1:
 Sample BC3:
 ![BC3 vcf file](../fig/VC/vcf_2snp.png)
 
-In the .vcf files, we will see the a few information (marked with 2 hashes, `##`) at the top. Amongst this information, first is the header, which defines that the file format is a VCF file. This are followed by the time and date the file was created, the version and program used to generate the VCF files, the command line parameters used, as well as some other additional information.
+In the .vcf files, we will see a few information lines (marked with 2 hashes, `##`) at the top. Amongst this information, first is the header, which defines that the file format is a VCF file. This are followed by the time and date the file was created, the version and program used to generate the VCF files, the command line parameters used, as well as some other additional information.
 
 The actual information on the variations called are at below these information headers, starting with `#CHROM`. The content of these actual output are as below. Ideally, the information in the first 7 columns will be enough for most use cases.
 1. `CHROM`: The name of the reference sequence; or the name of the chromosome etc in larger reference files where multiple chromosomes are present.
