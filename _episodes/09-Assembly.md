@@ -116,7 +116,7 @@ flye --nano-hq ./R10_BL21_trimmed.fastq --genome-size 4.5m --threads 4 --iterati
 > ~~~
 > {: .bash}
 >
-> We can then see an output like this:
+> We can then see an output that looks something like this (note that you may or may not get the same result as shown, its normal!):
 >
 > ~~~
 > stats for ./flye_output/assembly.fasta
