@@ -98,7 +98,7 @@ flye --nano-hq ./R10_BL21_trimmed.fastq --genome-size 4.5m --threads 4 --iterati
 ~~~
 {: .bash}
 
-> Assembler of Choice?
+> ## Assembler of Choice?
 >
 > Note that there generally isnt a "best assembler to use"! The choice and performance of assemblers will vary across different circumstances. Factors such as genome size, repetitiveness, GC content and others can all influence the performance of the assemblers! If one is to really do a serious genome assembly for their research/project, they should explore multiple assemblers, compare their results using a metric and decide for themselves which assembler to use! 
 >
