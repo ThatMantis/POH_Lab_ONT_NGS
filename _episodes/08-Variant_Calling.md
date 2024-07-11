@@ -25,9 +25,15 @@ Now that we have aligned the reads for each of the 4 individual demultiplexed sa
 
 ![VC workflows](../fig/VC_workflow.png)
 
-As mentioned above, variant calling allows us to detect variations commonly known as SNPs -- which generally include shorter variations at a single base pair level including insertions and deletions (INDELs) and transitions. Similar to the other steps in this exercise/workflow, there are many tools available for variant calling. In this workshop, we will explore [bcftools] and [medaka].
+As mentioned above, variant calling allows us to detect variations commonly known as SNPs -- which generally include shorter variations at a single base pair level including insertions and deletions (INDELs) and transitions. Similar to the other steps in this exercise/workflow, there are many tools available for variant calling. In this workshop, we will explore [bcftools] -- which was originally developed for Illumina short-read sequencing analysis; and [medaka] -- which was developed specifically for ONT/long-read sequencing technologies.
 
-While there is also another form of variant calling meant for structural variants -- which generally 
+While there is also another form of variant calling meant for structural variants -- which generally covers larger variants ranging from 50bp and more, and can include larger variants, inversions, translocations etc; we will not be exploring that in this workshop. However if users are interested in exploring structural variants, they can look at [Sniffles], which is a structural variant caller meant for long-read sequencing.
+
+### 
+
+
+
 
 [bcftools]: https://samtools.github.io/bcftools/
 [medaka]: https://github.com/nanoporetech/medaka
+[Sniffles]: https://github.com/fritzsedlazeck/Sniffles
