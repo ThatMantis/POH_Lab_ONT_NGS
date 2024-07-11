@@ -40,9 +40,9 @@ This shell is what we will be using in the second half of the workshop after lun
 >
 > > ## Removing Ubuntu from WSL2
 > >
-> > In case the user is interested in removing/resetting their Ubuntu image from WSL2/their laptops after the workshop, they can do so by:
+> > In case the user is interested in removing/resetting their Ubuntu image from WSL2/their laptops after the workshop, they can do so by entering PowerShell in Administrator mode and:
 > > 1. Find the Bash shell distro name (likely `Ubuntu` by default) with: `wsl --list`
-> > 2. Unregister (removing) the distro with the following line, replacing `Your_Ubuntu_distro` with the distro name you obtained from the step above: `wsl --unregister Your_Ubuntu_distro`
+> > 2. Unregister (removing) the distro with `wsl --unregister Your_Ubuntu_distro`, replacing `Your_Ubuntu_distro` with the distro name you obtained from the step above. 
 > >
 > > Note that once unregistered, all data, settings, and software associated with that distribution will be permanently lost. Reinstalling by following the steps above (with `wsl --install` ) will install a clean copy of the distribution. For example, wsl --unregister Ubuntu would remove Ubuntu from the distributions available in WSL. Running wsl --list will reveal that it is no longer listed.
 > >
