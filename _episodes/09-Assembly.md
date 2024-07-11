@@ -16,7 +16,7 @@ In the imaginary scenario of this exercise, we came across/were given a bacteria
 
 To solve our imaginary problem, we will need to sequence and conduct a genome assembly. To do so, we first lysed the wild-type cell and obtained the genomic DNA of the cell using a genomic DNA purification kit. We then sheared the genomic DNA into linear fragments through mechanical means, and prepared the DNA for sequencing using a ligation sequencing kit. The prepared library was then loaded into a Flongle R10 flow cell, sequenced and basecalled through the MinKNOW app with Super-High Accurary settings, and filtered for a minimum Qscore of 10. The raw basecalled sequencing files can be found in `~/ngs_workshop/assembly/fastq_pass`. The workflow for a general genome assembly/DNA sequence assembly is depicted in the image below.
 
-
+![Generic assembly workflow](../fig/Assembly_workfloww.png)
 
 ### Step 1. Quality Control
 
