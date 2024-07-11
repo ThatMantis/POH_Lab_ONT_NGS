@@ -221,6 +221,8 @@ done
 Similar to the .vcf files generated with BCFTools above, we can also follow the code in BCFTools Step 5 above to use the .vcf files we generated through Medaka for consensus calling. Alternatively, Medaka is able to generate the consensus sequences itself independent of the .vcf files. Again, all we need is the .fastq/.fasta sequencing files and .fasta reference files. Using the `medaka_consensus` workflow, the
 
 ~~~
+cd ~/ngs_workshop/vc
+
 # Create consensus .fasta sequences
 mkdir medaka_consensus
 for file in ./*BC*.fastq
