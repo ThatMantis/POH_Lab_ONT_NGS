@@ -26,6 +26,7 @@ This shell is what we will be using in the second half of the workshop after lun
 > 4. From the start menu, type "Linux", or "Ubuntu", and you should have a Linux distribution available to run. The first time you launch it might be a bit slow.
 >
 > > ## Accessing the Linux File System from Windows File Explorer
+> > 
 > >To allow ourselves to access the Linux filesystem (mounted as a virtual disk) in the Windows Explorer, follow the steps [here].
 > > Alternatively:
 > > 1. Open File Explorer
@@ -34,6 +35,16 @@ This shell is what we will be using in the second half of the workshop after lun
 > > OR: Enter `\\wsl$` in the run command. i.e.: `[WINDOWS KEY + R] > \\wsl$ > [ENTER]`
 > >
 > > Our personal Linux files will typically be stored at: `\\wsl$\Ubuntu\home\<yourname>`. Where <yourname> is the username you defined during installation.
+> >
+> {: .idea}
+>
+> > ## Removing Ubuntu from WSL2
+> >
+> > In case the user is interested in removing/resetting their Ubuntu image from WSL2/their laptops after the workshop, they can do so by:
+> > 1. Find the Bash shell distro name (likely `Ubuntu` by default) with: `wsl --list`
+> > 2. Unregister (removing) the distro with the following line, replacing `Your_Ubuntu_distro` with the distro name you obtained from the step above: `wsl --unregister Your_Ubuntu_distro`
+> >
+> > Note that once unregistered, all data, settings, and software associated with that distribution will be permanently lost. Reinstalling by following the steps above (with `wsl --install` ) will install a clean copy of the distribution. For example, wsl --unregister Ubuntu would remove Ubuntu from the distributions available in WSL. Running wsl --list will reveal that it is no longer listed.
 > >
 > {: .idea}
 > 
