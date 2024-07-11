@@ -82,7 +82,7 @@ With that, we can safely move on with using that set of barcodes for our library
 >
 > > ## Solution
 > >
-> > When should still see `0 barcodes violate the distance contraint.`, until we try `-d 6` where we should then see the output:
+> > We should still see `0 barcodes violate the distance contraint.`, until we try `-d 6` where we should then see the output:
 > >
 > > ~~~
 > > 2 barcodes violate the distance contraint.
