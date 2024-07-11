@@ -68,10 +68,10 @@ lets take a look at the QC reports!
 
 ### Step 2. Filtering
 
-Since we can see that the head quality indeed is of lower quality. Lets do some head and tail cropping of the reads, since we are doing long read sequencing here and can afford to! We will crop the head and tail 150bp, which is generally the region historically [reported to be of relatively lower quality]. To do so, we will use the program [nanofilt]. `--headcrop 150 --tailcrop 150` crops the first and last 150bp of each read, `-l 2000` filters out reads shorter than 2000 bp. Lets also try `-q 13` to filter out reads with Qscore below 13. `> R10_BL21_trimmed.fastq` pipes and saves the output into "R10_BL21_trimmed.fastq"; else NanoFilt will spit the output directly onto the command line -- try it for fun!
+Since we can see that the head quality indeed is of lower quality. Lets do some head and tail cropping of the reads, since we are doing long read sequencing here and can afford to! We will crop the head and tail 150bp, which is generally the region historically [reported to be of relatively lower quality]. To do so, we will use the program [nanofilt]. `--headcrop 150 --tailcrop 150` crops the first and last 150bp of each read, `-l 2000` filters out reads shorter than 2000 bp. Lets also try `-q 15` to filter off reads with Qscore below 15. `> R10_BL21_trimmed.fastq` pipes and saves the output into "R10_BL21_trimmed.fastq"; else NanoFilt will spit the output directly onto the command line -- try it for fun!
 
 ~~~
-NanoFilt R10_BL21.fastq -q 13 -l 2000 --headcrop 150 --tailcrop 150 > R10_BL21_trimmed.fastq
+NanoFilt R10_BL21.fastq -q 15 -l 2000 --headcrop 150 --tailcrop 150 > R10_BL21_trimmed.fastq
 ~~~
 {: .bash}
 
@@ -89,12 +89,12 @@ conda create --name flye -c conda-forge -c bioconda flye
 ~~~
 {: .bash}
 
-Thereafter, we can change into the "flye" environment with `conda activate flye`. We can then run flye on the NanoFilt filtered reads!
+Thereafter, we can change into the "flye" environment with `conda activate flye`. We can then run flye on the NanoFilt filtered reads! `--nano-hq ./R10_BL21_trimmed_q15.fastq` Specifies the input file, and `--nano-hq` specifies that the reads are of relatively higher quality (basecalled using **Super-Accurate Basecalling**, and **<5% error** since we NanoFilt filtered at Qscore 15. `--genome-size 4.5m` specifies that we expect the assembly to be about 4.5 million bp (e.coli). `--threads 4` specifies that we will use 4 threads for computing power to speed up the process. `--iterations 3` specifies that we want to polish the assembly 3 times (for better accuracy). `--out-dir ./flye_output` specifies the output we want to store the flye assembled output and temporary files in.
 
 ~~~
 # Create a new directory to store the flye-assembled output
 mkdir flye_output
-flye --nano-hq ./R10_BL21.fastq --genome-size 4.5m --out-dir ./flye_output
+flye --nano-hq ./R10_BL21_trimmed_q15.fastq --genome-size 4.5m --threads 4 --iterations 3 --out-dir ./flye_output
 ~~~
 {: .bash}
 
