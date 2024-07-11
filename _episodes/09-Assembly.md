@@ -161,6 +161,7 @@ medaka_consensus -i ../R10_BL21_trimmed.fastq -d ./assembly.fasta -o ./medaka_cl
 > After this we can check the quality of the polished assembly once again with `dnadiff`! 
 > 
 > ~~~
+> cd medaka_cleanup
 > dnadiff -p cleanup_dnadiff ~/ngs_workshop/assembly/CP053601.1.fasta ./consensus.fasta
 > ~~~
 > {: .bash}
