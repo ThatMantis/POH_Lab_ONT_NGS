@@ -113,6 +113,7 @@ In the code above, `java -jar ~/jvarkit/dist/jvarkit.jar` is used to call the ma
 ~~~
 # Generate .fai file first
 samtools faidx Reference.fasta
+
 # Generate .dict file, make sure the .dict file has the same name (minus the file extension) as the Reference.fasta file!
 samtools dict Reference.fasta -o Reference.dict
 ~~~
