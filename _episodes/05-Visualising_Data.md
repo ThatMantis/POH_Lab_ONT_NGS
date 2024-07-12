@@ -101,8 +101,12 @@ Thereafter, we can call the SAM2TSV tool from any directory with the format belo
 ~~~
 #from anywhere, using the "~":
 java -jar ~/jvarkit/dist/jvarkit.jar sam2tsv -R ~/jvarkit/src/test/resources/toy.fa ~/jvarkit/src/test/resources/toy.bam
+
+# Alternatively, instead of spitting the output directly onto the command line, we can pipe the output and save it as a .txt file with "> anything.txt", where "anything.txt" is the name of the .txt file etc, an ">" is used to pipe the output into this .txt file.
+java -jar ~/jvarkit/dist/jvarkit.jar sam2tsv -R ~/jvarkit/src/test/resources/toy.fa ~/jvarkit/src/test/resources/toy.bam > anything.txt
 ~~~
 {: .bash}
+
 
 In the code above, `java -jar ~/jvarkit/dist/jvarkit.jar` is used to call the main JVarkit tool. The `sam2tsv` line tells the computer we specifically want to use the SAM2TSV program within the JVarkit tool packages. `-R ~/jvarkit/src/test/resources/toy.fa` points to the reference **FASTA** file, and `~/jvarkit/src/test/resources/toy.bam` points to the alignment **.bam** file. Note that the reference FASTA file also requires a `.dict` file, which although it is not indicated in the command above, is still required (though in the toy example above, it has already been included). We can generate a `.dict` file from any `.fasta` file using the line below:
 
